@@ -5,13 +5,12 @@ public class Evenorodd {
 
     public static void main(String[] args) {
         String contchoice = "y";
-        Scanner choice = new Scanner(System.in);
-        Scanner num = new Scanner(System.in);
+        Scanner input = new Scanner(System.in);
 
         while (contchoice.equals("y")) {
 
             System.out.print("enter the number to be checked if odd or even: ");
-            int num1 = num.nextInt();
+            int num1 = input.nextInt();
 
             if (num1 % 2 == 0){
                 System.out.println("even number");
@@ -20,7 +19,7 @@ public class Evenorodd {
             }
 
             System.out.print("do you want to continue checking y/n");
-            contchoice = choice.next();
+            contchoice = input.next();
 
 
         }
