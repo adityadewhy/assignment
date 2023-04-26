@@ -10,20 +10,26 @@ public class Calculator {
         String choice = "y";
 
         while(choice.equals("y")){
-            double num1 = input.nextInt();
             System.out.print("Enter first number : ");
+            double num1 = input.nextInt();
 
+            System.out.print("Enter second number : ");
             double num2 = input.nextInt();
-            System.out.println("Enter second number : ");
 
+            System.out.print("what operation do you wanna do, choose from + - * / ");
             char operator = input.next().charAt(0);
-            System.out.println("what operation do you wanna do, choose from + - * /");
 
-            if (operator.equals("+")){
-                double sum = num1 + num2;
-                System.out.println("result is : "+ sum);
+            switch(operator){
+                case '+' -> System.out.println(num1 + num2);
+                case '-' -> System.out.println(num1 - num2);
+                case '*' -> System.out.println(num1 * num2);
+                case '/' -> System.out.println(num1 / num2);
+                default -> System.out.print("invalid operator");
             }
-            else
+
+            System.out.print("do you want to calculate again y or n: ");
+            choice = input.next();
+
         }
 
 
