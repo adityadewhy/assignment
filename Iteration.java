@@ -11,13 +11,11 @@ public class Iteration {
         int num = input.nextInt();
         int sum = 0;
         int product = 1;
-        int eachnum = 0;
-        while(eachnum>0){
-            int temp = num;
-            eachnum = temp % 10;
+        while(num>0){
+            int eachnum = num % 10;
             sum += eachnum;
             product *= eachnum;
-            eachnum = temp/10;
+            num = num/10;
         }
         int difference = product - sum;
         System.out.print("the required difference of product and sum of digits of numbers you entered is " + difference );
